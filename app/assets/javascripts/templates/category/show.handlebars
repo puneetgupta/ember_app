@@ -1,0 +1,14 @@
+
+<h2>{{categoryName}} Category.</h2>
+<h4>{{categoryDescription}}</h4><br/>
+Add Pins to the {{categoryName}} Category: {{view Ember.TextField valueBinding="image"}}
+<button type="submit" {{action "save_image" valueBinding="image"}}>Submit</button>
+
+{{view RailsEmber.UploadFileView name="logo_image" contentBinding="content" valueBinding="pins"}}
+<button type="submit" {{action "save_pin"}}>Save</button>
+
+<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 0, "itemSelector": ".item" }' style="width:900px">
+  <div class="item" style="width:300px;border:1px solid #E3E3E3;margin-left:10px;margin-bottom:10px;padding:25px;background-color:#00FFFF"><p style="text-align:center;width:65px"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS-Yz_gshhFjcRAtV-hjlyXXnLDDSvUxAole7rwgtpJzRP161FxyA" /></p></div>
+  <div class="item" style="width:300px;border:1px solid #E3E3E3;margin-left:10px;margin-bottom:10px;padding:25px;background-color:#00FFFF"><p style="text-align:center;width:65px"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHW2-48aQnM_SaPv1iNG-wyPzH4UFtj57owcKcObFkKwqk2UaNDA" /></p></div>
+  <div class="item" style="width:300px;border:1px solid #E3E3E3;margin-left:10px;margin-bottom:10px;padding:25px;background-color:#00FFFF"><p style="text-align:center;width:65px"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLrxMNtXInw27U5mTicthsUdF-Ak29QIOUdTrkxja3po9kSHHu" /></p></div>
+</div>

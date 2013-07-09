@@ -1,0 +1,14 @@
+<h3>Select your Category:<button type="submit" style="margin-left:185px" class="btn" {{action "add_category"}}>Add Category</button></h3>
+
+<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 0, "itemSelector": ".item" }' style="width:900px">
+{{#each category in controller}}
+   <div class="item" style="width:100px;border:1px solid #E3E3E3;margin-left:10px;margin-bottom:10px;padding:25px;background-color:#00FFFF"><p style="text-align:center;width:65px">{{#linkTo 'lists.show' category}}{{category.categoryName}}{{/linkTo}}</p></div>
+{{/each}}
+</div>
+
+<div id="add_category" style="display:none;width:300px;height:200px;background-color:white">
+  <h2>Add your Category</h2><br>
+  Category Name: {{view Ember.TextField valueBinding="categoryName"}}<br>
+  Category Description: {{view Ember.TextField valueBinding="categoryDescription"}}<br>
+  <button type="submit" class="btn" {{action "submit"}}>Submit</button>
+</div>

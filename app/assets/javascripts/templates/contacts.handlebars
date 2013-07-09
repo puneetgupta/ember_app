@@ -1,0 +1,9 @@
+<h1>contact page</h1>
+{{#each controller}}
+  {{firstName}}<br/>
+  {{lastName}}<br/>
+{{/each}}<br/>
+
+First Name: {{view Ember.TextField valueBinding="firstName"}}
+Last Name: {{view Ember.TextField valueBinding="lastName"}}
+<button type="submit" class="btn" {{action "submit"}}>Submit</button>
